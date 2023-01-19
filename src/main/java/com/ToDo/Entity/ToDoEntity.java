@@ -9,16 +9,18 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "ToDos")
+@Table(name = "ToDo")
 public class ToDoEntity {
 
 	@Id
 	@GeneratedValue
+	@Column(name = "ID")
 	private int id;
+	@Column(name = "DESCRIPTION OF ToDo")
 	private String toDoTitle;
 
 	@DateTimeFormat(pattern = "dd-MM-yyyy")
-	@Column(name = "date")
+	@Column(name = "DATE")
 	private String date;
 
 	public int getId() {
